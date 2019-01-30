@@ -17,7 +17,7 @@ services:
       - SUBDOMAINS=subdomain
       - ONLY_SUBDOMAINS=true
       - DHLEVEL=4096
-      - TZ=Europe/London
+      - TZ=America/New_York
       - VALIDATION=http
     depends_on:
       - hass
