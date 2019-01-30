@@ -13,7 +13,7 @@ services:
       - PUID=1000
       - PGID=1000
       - EMAIL=alexktz@gmail.com
-      - URL=ktz.me
+      - URL=google.com
       - SUBDOMAINS=subdomain
       - ONLY_SUBDOMAINS=true
       - DHLEVEL=4096
