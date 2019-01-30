@@ -1,0 +1,33 @@
+leaving:
+  alias: leaving
+  sequence:
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.lounge
+        message: Leaving home routine initiated. Entering lockdown mode in 3 minutes.
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.bedroom
+        message: Leaving home routine initiated. Entering lockdown mode in 3 minutes.
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.kitchen
+        message: Leaving home routine initiated. Entering lockdown mode in 3 minutes.
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.study_speaker
+        message: Leaving home routine initiated. Entering lockdown mode in 3 minutes.
+    - service: nest.set_away_mode
+      data:
+        away_mode: away
+    - delay:
+        seconds: 15
+    - service: switch.turn_off
+      entity_id: switch.lounge_tv_power
+    - delay:
+        minutes: 3
+    - service: light.turn_off
+      data:
+        entity_id: group.all_lights
+        transition: 30
+        brightness: 255

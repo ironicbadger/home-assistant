@@ -1,0 +1,5 @@
+---
+
+  - hosts: cartman
+    roles:
+      - role: ktz-hass

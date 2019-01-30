@@ -1,0 +1,65 @@
+bedtime:
+  alias: lockdown
+  sequence:
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.lounge
+        message: Bedtime routine initiated! 15 minutes till lights out.
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.study_speaker
+        message: Bedtime routine initiated! 15 minutes till lights out.
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.bedroom
+        message: Bedtime routine initiated! 15 minutes till lights out.
+    - delay:
+        seconds: 10
+    - service: light.turn_on
+      data:
+        entity_id: group.bedroom
+        brightness: 200
+    - service: light.turn_on
+      data:
+        entity_id: group.not_bedroom
+        brightness: 200
+        transition: 10
+    - service: switch.turn_off
+      entity_id: switch.lounge_tv_power
+    - delay:
+        minutes: 9
+    - service: light.turn_on
+      data:
+        entity_id: light.not_bedroom
+        brightness: 150
+        transition: 60
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.bedroom
+        message: 5 minutes till lights out
+    - delay:
+        minutes: 5
+    - service: light.turn_on
+      data:
+        entity_id: group.all_lights
+        brightness: 20
+        transition: 60
+    - delay:
+        minutes: 1
+    - service: light.turn_off
+      data:
+        entity_id: light.not_bedroom
+        transition: 60
+    - delay:
+        minutes: 1
+    - service: light.turn_on
+      data:
+        entity_id: group.bedroom
+        brightness: 50
+        transition: 60
+    - delay:
+        minutes: 1
+    - service: light.turn_off
+      data:
+        entity_id: group.all_lights
+        transition: 30

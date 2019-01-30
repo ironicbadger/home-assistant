@@ -1,0 +1,13 @@
+- platform: group
+  name: Not Bedroom
+  entities:
+    - light.bloom
+    - light.dining_front
+    - light.dining_kitchen
+    - light.kitchen_ceiling
+    - light.floor_lamp_lounge
+    - light.office_black_lamp
+    - light.porch
+    - light.sink1
+    - light.sink2
+    - light.chimney_led_strip

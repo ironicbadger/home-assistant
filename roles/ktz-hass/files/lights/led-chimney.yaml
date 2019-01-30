@@ -1,0 +1,26 @@
+- platform: mqtt
+  schema: json
+  effect: true
+  effect_list:
+    - bpm
+    - confetti
+    - cyclon rainbow
+    - dots
+    - fire
+    - glitter
+    - juggle
+    - lightning
+    - noise
+    - police all
+    - police one
+    - rainbow
+    - sinelon
+    - solid
+  brightness: true
+  flash: true
+  rgb: true
+  optimistic: false
+  qos: 0
+  name: "Chimney LED Strip"
+  state_topic: "leds/chimney"
+  command_topic: "leds/chimney/set"

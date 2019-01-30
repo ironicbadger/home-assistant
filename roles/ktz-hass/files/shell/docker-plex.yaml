@@ -1,0 +1,1 @@
+restart_plex_docker: 'curl http://127.0.0.1:8126/container/plex/restart'

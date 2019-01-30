@@ -1,0 +1,40 @@
+homeassistant:
+  name: !secret hass_name
+  latitude: 0
+  longitude: 0
+  elevation: 92
+  unit_system: imperial
+  time_zone: America/New_York
+  # Customization file
+  #customize: !include customize.yaml
+tts:
+  - platform: google
+mqtt:
+  password: !secret mqtt_password
+
+frontend:
+config: 
+updater:
+discovery:
+conversation:
+history:
+logbook:
+map:
+sun:
+
+#group: !include groups.yaml
+light: !include_dir_merge_list lights/
+automation: !include_dir_merge_list automations/
+switch: !include_dir_merge_list switches/
+
+script: !include_dir_merge_named scripts/
+google_assistant: !include_dir_merge_named google-assistant/
+nest: !include_dir_merge_named nest/
+ifttt: !include_dir_merge_named ifttt/
+telegram_bot: !include_dir_merge_list telegram/
+notify: !include_dir_merge_list notify/
+shell_command: !include_dir_merge_named shell/
+
+sensor:
+  # Weather prediction
+  - platform: yr

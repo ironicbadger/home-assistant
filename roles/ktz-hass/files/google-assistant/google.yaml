@@ -1,0 +1,19 @@
+project_id: !secret google_assistant_project_id
+api_key: !secret google_assistant_api_key
+exposed_domains:
+  - light
+  - switch
+  - script
+entity_config:
+  light.chimney:
+    name: chimney
+    aliases:
+      - LEDs
+  switch.lounge_tv_power:
+    name: tv
+  script.bedtime:
+    name: bedtime
+    aliases:
+      - bedtime
+      - going to bed
+      - night night
