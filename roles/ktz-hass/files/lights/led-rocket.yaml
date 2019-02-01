@@ -1,0 +1,17 @@
+- platform: mqtt
+  schema: json
+  effect: true
+  effect_list:
+    - confetti
+    - fire
+    - rainbow
+    - sinelon
+    - solid
+  brightness: true
+  flash: true
+  rgb: true
+  optimistic: false
+  qos: 0
+  name: "Rocket"
+  state_topic: "leds/rocket"
+  command_topic: "leds/rocket/set"
