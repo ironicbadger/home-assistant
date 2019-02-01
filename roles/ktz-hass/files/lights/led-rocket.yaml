@@ -13,5 +13,5 @@
   optimistic: false
   qos: 0
   name: "Rocket"
-  state_topic: "leds/rocket"
-  command_topic: "leds/rocket/set"
+  state_topic: "leds/lamps/rocket"
+  command_topic: "leds/lamps/rocket/set"

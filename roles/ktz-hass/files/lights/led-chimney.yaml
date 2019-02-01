@@ -21,6 +21,6 @@
   rgb: true
   optimistic: false
   qos: 0
-  name: "Chimney LED Strip"
-  state_topic: "leds/chimney"
-  command_topic: "leds/chimney/set"
+  name: "Chimney"
+  state_topic: "leds/lounge/chimney"
+  command_topic: "leds/lounge/chimney/set"
