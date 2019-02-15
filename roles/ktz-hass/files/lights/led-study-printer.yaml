@@ -17,7 +17,6 @@
     - sinelon
     - solid
   brightness: true
-  flash: true
   rgb: true
   optimistic: false
   qos: 0
