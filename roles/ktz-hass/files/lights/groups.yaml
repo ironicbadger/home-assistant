@@ -11,3 +11,9 @@
     - light.sink1
     - light.sink2
     - light.chimney_led_strip
+- platform: group
+  name: LEDs
+  entities:
+    - light.led_study_window
+    - light.led_study_double_doors
+    - light.led_lounge_window
