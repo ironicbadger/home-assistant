@@ -20,6 +20,6 @@
   rgb: true
   optimistic: false
   qos: 0
-  name: "Study Printer"
+  name: "LED Study Printer"
   state_topic: "leds/study/printer"
   command_topic: "leds/study/printer/set"

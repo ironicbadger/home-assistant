@@ -11,6 +11,6 @@
   rgb: true
   optimistic: false
   qos: 0
-  name: "Rocket"
+  name: "LED Rocket"
   state_topic: "leds/lamps/rocket"
   command_topic: "leds/lamps/rocket/set"

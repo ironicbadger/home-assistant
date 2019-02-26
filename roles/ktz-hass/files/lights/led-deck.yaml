@@ -20,6 +20,6 @@
   rgb: true
   optimistic: false
   qos: 0
-  name: "Deck LEDs"
+  name: "LED Deck"
   state_topic: "leds/outside/deck"
   command_topic: "leds/outside/deck/set"

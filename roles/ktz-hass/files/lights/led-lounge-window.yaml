@@ -20,6 +20,6 @@
   rgb: true
   optimistic: false
   qos: 0
-  name: "LED Chimney"
-  state_topic: "leds/lounge/chimney"
-  command_topic: "leds/lounge/chimney/set"
+  name: "LED Lounge Window"
+  state_topic: "leds/lounge/window"
+  command_topic: "leds/lounge/window/set"

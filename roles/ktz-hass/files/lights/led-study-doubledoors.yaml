@@ -20,6 +20,6 @@
   rgb: true
   optimistic: false
   qos: 0
-  name: "Study Double Doors"
+  name: "LED Study Double Doors"
   state_topic: "leds/study/doubledoors"
   command_topic: "leds/study/doubledoors/set"
