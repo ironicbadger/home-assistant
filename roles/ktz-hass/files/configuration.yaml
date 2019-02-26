@@ -1,8 +1,8 @@
 homeassistant:
   name: !secret hass_name
-  latitude: 0
-  longitude: 0
-  elevation: 92
+  latitude: !secret hass_lat
+  longitude: !secret hass_long
+  elevation: !secret hass_elevation
   unit_system: imperial
   time_zone: America/New_York
   # Customization file

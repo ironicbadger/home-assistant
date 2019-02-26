@@ -4,15 +4,15 @@ bedtime:
     - service: tts.google_say
       data_template:
         entity_id: media_player.lounge
-        message: Bedtime routine initiated! 15 minutes till lights out.
+        message: Bedtime routine initiated! 20 minutes till lights out.
     - service: tts.google_say
       data_template:
         entity_id: media_player.study_speaker
-        message: Bedtime routine initiated! 15 minutes till lights out.
+        message: Bedtime routine initiated! 20 minutes till lights out.
     - service: tts.google_say
       data_template:
         entity_id: media_player.bedroom
-        message: Bedtime routine initiated! 15 minutes till lights out.
+        message: Bedtime routine initiated! 20 minutes till lights out.
     - delay:
         seconds: 10
     - service: light.turn_on
@@ -35,8 +35,8 @@ bedtime:
         transition: 60
     - service: tts.google_say
       data_template:
-        entity_id: media_player.bedroom
-        message: 5 minutes till lights out
+        entity_id: media_player.bathroom
+        message: 5 minutes
     - delay:
         minutes: 5
     - service: light.turn_on
@@ -51,15 +51,15 @@ bedtime:
         entity_id: light.not_bedroom
         transition: 60
     - delay:
-        minutes: 1
+        minutes: 4
     - service: light.turn_on
       data:
         entity_id: group.bedroom
         brightness: 50
-        transition: 60
+        transition: 30
     - delay:
         minutes: 1
     - service: light.turn_off
       data:
         entity_id: group.all_lights
-        transition: 30
+        transition: 15
