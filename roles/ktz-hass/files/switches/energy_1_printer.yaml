@@ -1,0 +1,4 @@
+- platform: mqtt
+  name: "Power 3D Printer"
+  command_topic: "cmnd/energy/3dprinter/POWER"
+  state_topic: "stat/energy/3dprinter/POWER"
