@@ -1,0 +1,24 @@
+title: KTZ
+views:
+    # View tab title.
+  - title: KTZ
+    cards:
+        # The markdown card will render markdown text.
+      - type: markdown
+        title: Markdown box
+        content: >
+          Welcome to the **Lovelace UI**.
+      - type: 'custom:mini-graph-card'
+        entities: 
+          - entity: sensor.energy_1_watts
+            show_state: true
+        animate: true
+        hour24: true
+        hours_to_show: 3
+        labels: true
+        legened: true
+        name: 3D Printer
+        points_per_hour: 6
+resources:
+  - url: /local/mini-graph-card-bundle.js?v=0.3.0
+    type: module

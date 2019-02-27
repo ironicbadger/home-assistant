@@ -13,19 +13,23 @@ mqtt:
   password: !secret mqtt_password
 
 frontend:
+lovelace:
+  mode: yaml
 config: 
 updater:
-discovery:
+#discovery:
 conversation:
 history:
 logbook:
 map:
 sun:
+system_health:
 
 #group: !include groups.yaml
 light: !include_dir_merge_list lights/
 automation: !include_dir_merge_list automations/
 switch: !include_dir_merge_list switches/
+sensor: !include_dir_merge_list sensor/
 
 script: !include_dir_merge_named scripts/
 google_assistant: !include_dir_merge_named google-assistant/
@@ -34,7 +38,3 @@ ifttt: !include_dir_merge_named ifttt/
 telegram_bot: !include_dir_merge_list telegram/
 notify: !include_dir_merge_list notify/
 shell_command: !include_dir_merge_named shell/
-
-sensor:
-  # Weather prediction
-  - platform: yr
