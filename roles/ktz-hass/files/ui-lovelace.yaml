@@ -12,13 +12,23 @@ views:
         entities: 
           - entity: sensor.energy_1_watts
             show_state: true
+            name: Prusa
+          - entity: sensor.energy_2_watts
+            show_state: true
+            name: TV
+          - entity: sensor.energy_3_watts
+            show_state: true
+            name: PC
+          - entity: sensor.energy_4_watts
+            show_state: true
+            name: Server
         animate: true
         hour24: true
-        hours_to_show: 3
+        hours_to_show: 6
         labels: true
         legened: true
-        name: 3D Printer
-        points_per_hour: 6
+        name: Energy Usage (w)
+        points_per_hour: 4
 resources:
   - url: /local/mini-graph-card-bundle.js?v=0.3.0
     type: module

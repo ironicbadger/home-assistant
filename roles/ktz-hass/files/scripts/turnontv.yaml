@@ -1,0 +1,13 @@
+test:
+  alias: tv
+  sequence:
+    - service: switch.turn_on
+      entity_id: switch.ac_tv
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.lounge
+        message: TV will turn on in 45 seconds...
+    - delay:
+        seconds: 45
+    - service: switch.turn_on
+      entity_id: switch.lounge_tv_power
