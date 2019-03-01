@@ -10,7 +10,9 @@
     - light.porch
     - light.sink1
     - light.sink2
-    - light.chimney_led_strip
+    - light.led_study_window
+    - light.led_study_double_doors
+    - light.led_lounge_window
 - platform: group
   name: LEDs
   entities:

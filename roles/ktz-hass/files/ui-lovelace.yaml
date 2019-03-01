@@ -22,6 +22,9 @@ views:
           - entity: sensor.energy_4_watts
             show_state: true
             name: Server
+          - entity: sensor.energy_6_watts
+            show_state: true
+            name: Washer
         animate: true
         hour24: true
         hours_to_show: 6
