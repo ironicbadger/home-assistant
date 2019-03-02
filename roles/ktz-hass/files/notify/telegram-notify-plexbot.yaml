@@ -1,0 +1,3 @@
+- name: plexbotnotify
+  platform: telegram
+  chat_id: !secret telegram_notify_plexbot_chat_id

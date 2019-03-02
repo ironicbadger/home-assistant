@@ -1,0 +1,6 @@
+- platform: polling
+  api_key: !secret telegram_bot_ktz_hassbot_api_key
+  allowed_chat_ids:
+    - !secret telegram_notify_ktz_hassbot_group_id
+    - !secret telegram_bot_chat_id_alex
+    - !secret telegram_bot_chat_id_cat

@@ -1,9 +1,0 @@
-- platform: polling
-  api_key: !secret telegram_bot_plex_api_key
-  allowed_chat_ids:
-    - !secret telegram_bot_plex_chat_id_alex
-    - !secret telegram_bot_plex_chat_id_cat
-    - !secret telegram_bot_plex_chat_id_caitlin
-    - !secret telegram_bot_plex_chat_id_dave
-    - !secret telegram_bot_plex_chat_id_claire_fedei
-    - !secret telegram_notify_hassbot_chat_id

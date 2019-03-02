@@ -6,7 +6,7 @@
     event_data:
       command: '/ping'
   action:
-    - service: notify.hassbotnotify
+    - service: notify.plexbotnotify
       data:
         message: 'pong'
 - alias: 'Restart Plex Docker container'
@@ -17,12 +17,12 @@
     event_data:
       command: '/plex'
   action:
-    - service: notify.hassbotnotify
+    - service: notify.plexbotnotify
       data:
         message: 'Bad Plex. Naughty Plex. Go to your room. Restarting...'
     - service: shell_command.restart_plex_docker
     - delay:
         seconds: 5
-    - service: notify.hassbotnotify
+    - service: notify.plexbotnotify
       data:
         message: 'Plex has now restarted. w00t!'

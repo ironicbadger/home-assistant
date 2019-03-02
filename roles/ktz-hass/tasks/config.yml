@@ -7,6 +7,13 @@
 #     mode: 0777
 #     state: directory
 
+- name: blow away old config
+  file:
+    state: absent
+    path: "{{ hass_config_path }}/{{ item }}"
+  with_items:
+    - "{{ hass_config_subdirectories }}"
+
 # overwrites all existing configuration
 - name: install new HASS configuration to remote host
   synchronize:

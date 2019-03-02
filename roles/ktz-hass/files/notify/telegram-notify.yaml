@@ -1,3 +1,0 @@
-- name: hassbotnotify
-  platform: telegram
-  chat_id: !secret telegram_notify_hassbot_chat_id
