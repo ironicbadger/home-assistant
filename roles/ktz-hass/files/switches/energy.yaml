@@ -6,3 +6,7 @@
   name: ac_tv
   command_topic: "cmnd/energy_2/lounge_tv/POWER"
   state_topic: "stat/energy_2/lounge_tv/POWER"
+- platform: mqtt
+  name: ac_solderingiron
+  command_topic: "cmnd/energy_8/solderingiron/POWER"
+  state_topic: "stat/energy_8/solderingiron/POWER"

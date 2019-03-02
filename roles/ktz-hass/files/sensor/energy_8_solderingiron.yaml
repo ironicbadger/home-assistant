@@ -1,0 +1,5 @@
+- platform: mqtt
+  name: "energy_8_soldering_iron"
+  state_topic: "stat/energy_8/solderingiron/POWER"
+  json_attributes_topic: "tele/energy_8/solderingiron/SENSOR"
+  

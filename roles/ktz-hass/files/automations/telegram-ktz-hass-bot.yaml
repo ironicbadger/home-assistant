@@ -9,3 +9,23 @@
     - service: notify.ktzhassbotnotify
       data:
         message: 'ping'
+- alias: 'Turn on soldering iron'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/ironon'
+  action:
+    - service: homeassistant.turn_on
+      entity_id: switch.ac_solderingiron
+- alias: 'Turn on soldering iron'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data:
+      command: '/ironoff'
+  action:
+    - service: homeassistant.turn_off
+      entity_id: switch.ac_solderingiron
