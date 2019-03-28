@@ -1,0 +1,12 @@
+lettherebelight:
+  alias: lights up
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: group.all_lights
+        transition: 10
+        brightness: 255
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.lounge
+        message: And there was light.

@@ -10,6 +10,10 @@ entity_config:
     aliases:
       - strip lights
       - LED
+  group.living_area:
+    name: living area
+    aliases:
+      - living quarters
   switch.lounge_tv_power:
     name: tv
     aliases:

@@ -19,3 +19,11 @@
     - light.led_study_window
     - light.led_study_double_doors
     - light.led_lounge_window
+- platform: group
+  name: Living Area
+  entities:
+    - light.bloom
+    - light.floor_lamp_lounge
+    - light.led_lounge_window
+    - light.led_study_double_doors
+    - light.led_study_window

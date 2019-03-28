@@ -3,11 +3,7 @@
   trigger:
     platform: sun
     event: sunset
-    offset: "-01:00:00"
-  condition:
-    condition: state
-    entity_id: group.all_devices
-    state: 'home'
+    offset: "-00:30:00"
   action:
     service: homeassistant.turn_on
-    entity_id: group.not_bedroom
+    entity_id: light.living_area

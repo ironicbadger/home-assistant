@@ -1,5 +1,5 @@
 bedtime:
-  alias: lockdown
+  alias: bedtime
   sequence:
     - service: tts.google_say
       data_template:

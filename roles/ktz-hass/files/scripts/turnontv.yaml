@@ -1,6 +1,8 @@
-test:
+turnontv:
   alias: tv
   sequence:
+    - service: switch.turn_on
+      entity_id: switch.lounge_tv_power
     - service: switch.turn_on
       entity_id: switch.ac_tv
     - service: tts.google_say
@@ -11,3 +13,5 @@ test:
         seconds: 45
     - service: switch.turn_on
       entity_id: switch.lounge_tv_power
+    - service: light.turn_on
+      entity_id: light.bloom

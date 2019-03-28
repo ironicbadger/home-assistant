@@ -1,17 +1,9 @@
 leaving:
-  alias: leaving
+  alias: heading out
   sequence:
     - service: tts.google_say
       data_template:
         entity_id: media_player.lounge
-        message: Leaving home routine initiated. Entering lockdown mode in 3 minutes.
-    - service: tts.google_say
-      data_template:
-        entity_id: media_player.bedroom
-        message: Leaving home routine initiated. Entering lockdown mode in 3 minutes.
-    - service: tts.google_say
-      data_template:
-        entity_id: media_player.kitchen
         message: Leaving home routine initiated. Entering lockdown mode in 3 minutes.
     - service: tts.google_say
       data_template:
@@ -30,4 +22,3 @@ leaving:
       data:
         entity_id: group.all_lights
         transition: 30
-        brightness: 255

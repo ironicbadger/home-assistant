@@ -13,8 +13,8 @@ mqtt:
   password: !secret mqtt_password
 
 frontend:
-lovelace:
-  mode: yaml
+# lovelace:
+#   mode: yaml
 config: 
 updater:
 #discovery:
