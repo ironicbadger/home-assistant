@@ -28,11 +28,11 @@
     src: secrets.yaml
     dest: "/opt/appdata/hass/secrets.yaml"
 
-# use hass to check config
-- name: check HASS config
-  command: "docker exec -ti hass python -m homeassistant --config /config --script check_config"
+# # use hass to check config
+# - name: check HASS config
+#   command: "docker exec -ti hass python -m homeassistant --config /config --script check_config"
 
-- name: restart docker if config check went ok
-  command: docker restart hass
-  when:
-    - hass_config.changed
+# - name: restart docker if config check went ok
+#   command: docker restart hass
+#   when:
+#     - hass_config.changed
