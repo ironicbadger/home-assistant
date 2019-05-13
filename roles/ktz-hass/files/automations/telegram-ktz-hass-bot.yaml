@@ -19,6 +19,9 @@
   action:
     - service: homeassistant.turn_on
       entity_id: switch.ac_solderingiron
+    - service: notify.ktzhassbotnotify
+      data:
+        message: 'ok, iron on'
 - alias: 'Turn on soldering iron'
   hide_entity: true
   trigger:
@@ -29,3 +32,17 @@
   action:
     - service: homeassistant.turn_off
       entity_id: switch.ac_solderingiron
+    - service: notify.ktzhassbotnotify
+      data:
+        message: 'ok, iron off'
+- alias: 'bedtime'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data: '/bedtime'
+  action:
+    - service: script.bedtime
+    - service: notify.ktzhassbotnotify
+      data:
+        message: 'ok, its bedtime.'

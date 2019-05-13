@@ -18,7 +18,7 @@
 - name: install new HASS configuration to remote host
   synchronize:
     src: files/
-    dest: "/opt/appdata/hass"
+    dest: "{{ hass_config_path }}"
   register: hass_config
 
 # must be a separate task so that the ansible-vault decryption installs this file
@@ -26,7 +26,7 @@
 - name: copy over secrets
   copy:
     src: secrets.yaml
-    dest: "/opt/appdata/hass/secrets.yaml"
+    dest: "{{ hass_config_path }}/secrets.yaml"
 
 # # use hass to check config
 # - name: check HASS config

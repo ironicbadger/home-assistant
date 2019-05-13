@@ -1,5 +1,5 @@
 ---
-hass_config_path: /opt/appdata/hass
+hass_config_path: /mnt/tank/appdata/hass
 hass_config_subdirectories:
   - automations
   - google-assistant 
