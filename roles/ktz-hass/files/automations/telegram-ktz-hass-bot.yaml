@@ -35,14 +35,15 @@
     - service: notify.ktzhassbotnotify
       data:
         message: 'ok, iron off'
-- alias: 'bedtime'
+- alias: 'telegram bedtime'
   hide_entity: true
   trigger:
     platform: event
     event_type: telegram_command
-    event_data: '/bedtime'
+    event_data: 
+      command: '/bedtime'
   action:
-    - service: script.bedtime
     - service: notify.ktzhassbotnotify
       data:
         message: 'ok, its bedtime.'
+    - service: script.bedtime

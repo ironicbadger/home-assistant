@@ -6,7 +6,7 @@ lettherebelight:
         entity_id: group.all_lights
         transition: 10
         brightness: 255
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.lounge
         message: And there was light.

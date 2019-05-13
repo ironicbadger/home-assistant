@@ -1,15 +1,15 @@
 morning:
   alias: good morning
   sequence:
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.lounge
         message: Morning routine initiated! Good morning Kretzschmars!!!
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.bedroom
         message: Morning routine initiated! Good morning Kretzschmars!!!
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.kitchen
         message: Morning routine initiated! Good morning Kretzschmars!!!

@@ -5,7 +5,7 @@ darkness:
       data:
         entity_id: group.all_lights
         transition: 5
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.lounge
         message: The midnight hour must be close at hand.

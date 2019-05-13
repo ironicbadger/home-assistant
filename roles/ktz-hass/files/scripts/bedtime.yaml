@@ -1,15 +1,15 @@
 bedtime:
   alias: bedtime
   sequence:
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.lounge
         message: Bedtime routine initiated! 20 minutes till lights out.
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.study_speaker
         message: Bedtime routine initiated! 20 minutes till lights out.
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.bedroom
         message: Bedtime routine initiated! 20 minutes till lights out.
@@ -39,7 +39,7 @@ bedtime:
         entity_id: light.not_bedroom
         brightness: 150
         transition: 60
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.bathroom
         message: 5 minutes
@@ -68,7 +68,7 @@ bedtime:
     - service: light.turn_on
       data:
         entity_id: group.bedroom
-        brightness: 75
+        brightness: 125
         transition: 5
     - service: light.turn_off
       data:

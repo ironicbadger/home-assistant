@@ -6,7 +6,7 @@ imhome:
         entity_id: light.living_area
         transition: 10
         brightness: 255
-    - service: tts.google_say
+    - service: tts.google_translate_say
       data_template:
         entity_id: media_player.lounge
         message: Welcome home sir.
