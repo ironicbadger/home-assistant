@@ -7,7 +7,7 @@
   action:
     service: light.turn_on
     data:
-      entity_id: group.switchplates
+      entity_id: light.switchplates
       brightness_pct: 75
 - alias: Turn off switchplate backlights at night (backup, bedtime should do this)
   hide_entity: True
