@@ -1,0 +1,34 @@
+- alias: Turn on switchplate backlights in the morning
+  hide_entity: True
+  trigger:
+    platform: sun
+    event: sunrise
+    offset: "-00:10:00"
+  action:
+    service: light.turn_on
+    data:
+      entity_id: group.switchplates
+      brightness_pct: 75
+- alias: Turn off switchplate backlights at night (backup, bedtime should do this)
+  hide_entity: True
+  trigger:
+    platform: time
+    at: '00:30:00'
+  action:
+    service: light.turn_off
+    data:
+      entity_id: light.switchplates
+# - alias: Ensure switchplate backlights are on during the day
+#   trigger:
+#     platform: numeric_state
+#     entity_id: light.plate01_backlight
+#     value_template: "{{ state_attr('light.plate01_backlight', 'brightness') }}"
+#     above: 225
+#     below: 50
+#     for:
+#       seconds: 5
+#   action:
+#     service: light.turn_on
+#     data:
+#       entity_id: group.switchplates
+#       brightness_pct: 75

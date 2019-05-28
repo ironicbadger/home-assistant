@@ -27,3 +27,7 @@
     - light.led_lounge_window
     - light.led_study_double_doors
     - light.led_study_window
+- platform: group
+  name: Switchplates
+  entities:
+    - light.plate01_backlight

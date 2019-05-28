@@ -1,5 +1,5 @@
 lettherebelight:
-  alias: lights up
+  alias: alllightson
   sequence:
     - service: light.turn_on
       data:

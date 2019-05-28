@@ -8,6 +8,7 @@ hass_config_subdirectories:
   - lights 
   - nest 
   - notify 
+  - packages
   - scripts 
   - sensor 
   - shell 

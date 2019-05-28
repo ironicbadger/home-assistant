@@ -1,0 +1,55 @@
+summonc:
+  alias: summon c
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.guest_bedroom
+        brightness: 255
+    - delay:
+        seconds: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.guest_bedroom
+        brightness: 25
+    - delay:
+        seconds: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.guest_bedroom
+        brightness: 255
+    - delay:
+        seconds: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.guest_bedroom
+        brightness: 25
+    - delay:
+        seconds: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.guest_bedroom
+        brightness: 255
+    - delay:
+        seconds: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.guest_bedroom
+        brightness: 25
+    - delay:
+        seconds: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.guest_bedroom
+        brightness: 255
+    - delay:
+        seconds: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.guest_bedroom
+        brightness: 25
+    - delay:
+        seconds: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.guest_bedroom
+        brightness: 255

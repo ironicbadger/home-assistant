@@ -9,3 +9,9 @@ darkness:
       data_template:
         entity_id: media_player.lounge
         message: The midnight hour must be close at hand.
+    - delay:
+        seconds: 1
+    - service: light.turn_on
+      data:
+        entity_id: light.plate01_backlight
+        brightness_pct: 50

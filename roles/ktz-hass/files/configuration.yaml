@@ -5,10 +5,12 @@ homeassistant:
   elevation: !secret hass_elevation
   unit_system: imperial
   time_zone: America/New_York
+  # added for HA SwitchPlate
+  packages: !include_dir_named packages/
   # Customization file
   #customize: !include customize.yaml
 tts:
-  - platform: google
+  - platform: google_translate
 mqtt:
   password: !secret mqtt_password
 
@@ -42,3 +44,6 @@ telegram_bot: !include_dir_merge_list telegram/
 notify: !include_dir_merge_list notify/
 shell_command: !include_dir_merge_named shell/
 influxdb: !include_dir_merge_named influxdb/
+
+# added for HA SwitchPlate
+recorder:

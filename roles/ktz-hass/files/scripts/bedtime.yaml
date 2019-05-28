@@ -69,8 +69,7 @@ bedtime:
       data:
         entity_id: group.bedroom
         brightness: 125
-        transition: 5
     - service: light.turn_off
       data:
         entity_id: group.all_lights
-        transition: 15
+        transition: 5

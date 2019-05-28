@@ -1,0 +1,11 @@
+- alias: 11pm Bedtime nudge
+  hide_entity: True
+  trigger:
+    platform: time
+    at: '23:15:00'
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.living_area
+      brightness_pct: 50
+      transition: 2

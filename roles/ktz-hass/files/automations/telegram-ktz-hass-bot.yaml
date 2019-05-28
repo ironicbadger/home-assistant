@@ -47,3 +47,28 @@
       data:
         message: 'ok, its bedtime.'
     - service: script.bedtime
+- alias: 'telegram tv on'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data: 
+      command: '/tvon'
+  action:
+    - service: notify.ktzhassbotnotify
+      data:
+        message: 'ok, tv turning on...'
+    - service: script.turnontv
+- alias: 'telegram tv off'
+  hide_entity: true
+  trigger:
+    platform: event
+    event_type: telegram_command
+    event_data: 
+      command: '/tvoff'
+  action:
+    - service: notify.ktzhassbotnotify
+      data:
+        message: 'ok, tv turning off...'
+    - service: switch.turn_off
+      entity_id: switch.lounge_tv_power

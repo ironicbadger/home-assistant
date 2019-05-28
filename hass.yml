@@ -1,5 +1,5 @@
 ---
 
-  - hosts: cartman
+  - hosts: infra
     roles:
       - role: ktz-hass

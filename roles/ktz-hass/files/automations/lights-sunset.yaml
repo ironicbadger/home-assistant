@@ -3,7 +3,10 @@
   trigger:
     platform: sun
     event: sunset
-    offset: "-00:30:00"
+    offset: "-00:45:00"
   action:
-    service: homeassistant.turn_on
-    entity_id: light.living_area
+    service: light.turn_on
+    data:
+      entity_id: light.living_area
+      transition: 30
+      brightness_pct: 80
