@@ -4,34 +4,91 @@ views:
   - title: KTZ
     cards:
         # The markdown card will render markdown text.
-      - type: markdown
-        title: Markdown box
-        content: >
-          Welcome to the **Lovelace UI**.
-      - type: 'custom:mini-graph-card'
-        entities: 
-          - entity: sensor.energy_1_watts
-            show_state: true
-            name: Prusa
-          - entity: sensor.energy_2_watts
-            show_state: true
-            name: TV
-          - entity: sensor.energy_3_watts
-            show_state: true
-            name: PC
-          - entity: sensor.energy_4_watts
-            show_state: true
-            name: Server
-          - entity: sensor.energy_6_watts
-            show_state: true
-            name: Washer
-        animate: true
-        hour24: true
-        hours_to_show: 6
-        labels: true
-        legened: true
-        name: Energy Usage (w)
-        points_per_hour: 4
+      # - type: markdown
+      #   title: Markdown box
+      #   content: >
+      #     Welcome to the **Lovelace UI**.
+      # - type: 'custom:mini-graph-card'
+      #   animate: true
+      #   hour24: true
+      #   hours_to_show: 6
+      #   labels: true
+      #   legend: true
+      #   name: Energy Usage (w)
+      #   points_per_hour: 4
+      #   entities: 
+      #     - entity: sensor.energy_1_watts
+      #       show_state: true
+      #       name: Prusa
+      #     - entity: sensor.energy_2_watts
+      #       show_state: true
+      #       name: TV
+      #     - entity: sensor.energy_3_watts
+      #       show_state: true
+      #       name: PC
+      #     - entity: sensor.energy_4_watts
+      #       show_state: true
+      #       name: Server
+      #     - entity: sensor.energy_6_watts
+      #       show_state: true
+      #       name: Washer
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            points_per_hour: 6
+            legend: true
+            animate: true
+            hour24: true
+            entities:
+              - sensor.basement_humidity
+            line_color: blue
+            name: "Basement Humidty"
+            line_width: 8
+            font_size: 75
+          # - type: custom:mini-graph-card
+          #   entities:
+          #     - sensor.illumination
+          #   line_color: '#e74c3c'
+          #   line_width: 8
+          #   font_size: 75
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.basement_temperature
+            line_color: var(--accent-color)
+            name: "Basement Temp"
+            line_width: 8
+            font_size: 75
+      - type: horizontal-stack
+        cards:
+          - type: custom:mini-graph-card
+            points_per_hour: 6
+            legend: true
+            animate: true
+            hour24: true
+            entities:
+              - sensor.lounge_humidity
+            line_color: blue
+            name: "Lounge Humidty"
+            line_width: 8
+            font_size: 75
+          # - type: custom:mini-graph-card
+          #   entities:
+          #     - sensor.illumination
+          #   line_color: '#e74c3c'
+          #   line_width: 8
+          #   font_size: 75
+          - type: custom:mini-graph-card
+            entities:
+              - sensor.lounge_temperature
+            line_color: var(--accent-color)
+            name: "Lounge Temp"
+            line_width: 8
+            font_size: 75
+
 resources:
-  - url: /local/mini-graph-card-bundle.js?v=0.3.0
+  - url: /local/mini-graph-card-bundle.js?v=0.4.2
     type: module
+
+custom_updater:
+  card_urls:
+    - https://raw.githubusercontent.com/kalkih/mini-graph-card/master/tracker.json

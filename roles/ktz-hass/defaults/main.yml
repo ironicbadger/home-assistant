@@ -14,3 +14,4 @@ hass_config_subdirectories:
   - shell 
   - switches 
   - telegram 
+  - www
