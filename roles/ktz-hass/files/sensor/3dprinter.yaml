@@ -1,0 +1,9 @@
+- platform: mqtt
+  state_topic: 'octoprint/event/PrinterStateChanged'
+  name: 'Printer Status'
+  value_template: '{{ value_json.state_string }}'
+- platform: mqtt
+  state_topic: "octoprint/progress/printing"
+  unit_of_measurement: "%"
+  name: "Percentage Done"
+  value_template: '{{ value_json.progress }}'

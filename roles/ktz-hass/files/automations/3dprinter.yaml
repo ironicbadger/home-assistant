@@ -1,0 +1,19 @@
+- trigger:
+    platform: state
+    entity_id: sensor.printer_status
+    from: 'OPERATIONAL'
+    to: 'PRINTING'
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.printer_led_cam
+      brightness_pct: 75
+- trigger:
+    platform: state
+    entity_id: sensor.printer_status
+    from: 'PRINTING'
+    to: 'OPERATIONAL'
+  action:
+    service: light.turn_off
+    data:
+      entity_id: light.printer_led_cam

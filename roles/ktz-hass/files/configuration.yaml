@@ -6,7 +6,7 @@ homeassistant:
   unit_system: imperial
   time_zone: America/New_York
   # added for HA SwitchPlate
-  packages: !include_dir_named packages/
+  #packages: !include_dir_named packages/
   # Customization file
   #customize: !include customize.yaml
 tts:
@@ -14,12 +14,10 @@ tts:
 mqtt:
   password: !secret mqtt_password
 
-lovelace:
-  mode: yaml
-
-frontend:
 # lovelace:
 #   mode: yaml
+
+frontend:
 config: 
 updater:
 #discovery:
@@ -49,4 +47,4 @@ shell_command: !include_dir_merge_named shell/
 influxdb: !include_dir_merge_named influxdb/
 
 # added for HA SwitchPlate
-recorder:
+#recorder:
