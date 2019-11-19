@@ -45,6 +45,12 @@ telegram_bot: !include_dir_merge_list telegram/
 notify: !include_dir_merge_list notify/
 shell_command: !include_dir_merge_named shell/
 influxdb: !include_dir_merge_named influxdb/
+# vacuum:
+#   - platform: eufyrobovac
+#     name: chester
+#     ip_address: 192.168.1.214
+#     username: !secret eufy_username
+#     password: !secret eufy_password
 
 # added for HA SwitchPlate
 #recorder:
