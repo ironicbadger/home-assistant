@@ -20,13 +20,14 @@ mqtt:
 frontend:
 config: 
 updater:
-#discovery:
+discovery:
 conversation:
 history:
 logbook:
 map:
 sun:
 system_health:
+wake_on_lan:
 hue:
   bridges:
     - host: 192.168.1.210
@@ -36,6 +37,7 @@ light: !include_dir_merge_list lights/
 automation: !include_dir_merge_list automations/
 switch: !include_dir_merge_list switches/
 sensor: !include_dir_merge_list sensor/
+media_player: !include_dir_merge_list media-player/
 
 script: !include_dir_merge_named scripts/
 google_assistant: !include_dir_merge_named google-assistant/
@@ -45,6 +47,7 @@ telegram_bot: !include_dir_merge_list telegram/
 notify: !include_dir_merge_list notify/
 shell_command: !include_dir_merge_named shell/
 influxdb: !include_dir_merge_named influxdb/
+
 # vacuum:
 #   - platform: eufyrobovac
 #     name: chester

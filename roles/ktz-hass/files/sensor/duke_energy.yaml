@@ -1,0 +1,3 @@
+- platform: duke_energy
+  username: !secret duke_energy_username
+  password: !secret duke_energy_password
