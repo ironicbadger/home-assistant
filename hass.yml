@@ -1,5 +1,0 @@
----
-
-  - hosts: infra
-    roles:
-      - role: ktz-hass

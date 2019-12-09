@@ -1,4 +1,0 @@
-- platform: mqtt
-  name: "energy_6_washer"
-  state_topic: "stat/energy_6/washer/POWER"
-  json_attributes_topic: "tele/energy_6/washer/SENSOR"

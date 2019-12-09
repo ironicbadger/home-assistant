@@ -1,8 +1,0 @@
-- platform: webostv
-  host: 192.168.1.9
-  name: c9
-  filename: media-player/conf-lg-c9.conf
-  turn_on_action:
-    service: wake_on_lan.send_magic_packet
-    data:
-      mac: "20:17:42:88:67:bb"

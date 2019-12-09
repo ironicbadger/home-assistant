@@ -1,6 +1,0 @@
----
-
-- name: copy over new config files
-  include: config.yml
-  tags:
-    - config
